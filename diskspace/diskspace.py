@@ -39,7 +39,6 @@ args = parser.parse_args()
 def subprocess_check_output(command):
     return subprocess.check_output(command.strip().split(' '))
 
-
 def bytes_to_readable(blocks):
     byts = blocks * 512
     readable_bytes = byts
@@ -128,7 +127,6 @@ def show_space_list(directory='.', depth=-1, order=True):
             key=lambda v: file_tree[v]['size'],
             reverse=order
         )
-
         file_tree_entry['print_size'] = bytes_to_readable(
             file_tree_entry['size']
         )
